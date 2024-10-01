@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+RBbot_inference/__init__.py
+RBbot_inference/architectures.py
+RBbot_inference/load_model.py
+RBbot_inference.egg-info/PKG-INFO
+RBbot_inference.egg-info/SOURCES.txt
+RBbot_inference.egg-info/dependency_links.txt
+RBbot_inference.egg-info/requires.txt
+RBbot_inference.egg-info/top_level.txt
