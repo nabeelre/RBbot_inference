@@ -7,14 +7,14 @@ import RBbot_inference.architectures as arch
 latest_model = "RBbot-quiet-shadow-131"
 
 
-def load_model(model_name):
+def load_model(model_name, model_root="models"):
     """
     Loads model saved as state_dict and applies DANN architecture
     """
     if model_name == "latest":
         model_name = latest_model
 
-    with open(f"models/{model_name}-config.json") as f:
+    with open(f"{model_root}/{model_name}-config.json") as f:
         config = json.load(f)
 
     model = arch.DANN(config)
