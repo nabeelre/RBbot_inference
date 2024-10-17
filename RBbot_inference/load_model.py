@@ -19,7 +19,7 @@ def load_model(model_name, model_root="models"):
 
     model = arch.DANN(config)
     model.load_state_dict(
-        torch.load(f'models/{model_name}.pth',
+        torch.load(f'{model_root}/{model_name}.pth',
                    weights_only=True,
                    map_location=torch.device('cpu'))
     )
