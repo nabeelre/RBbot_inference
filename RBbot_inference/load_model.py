@@ -4,11 +4,16 @@ import numpy as np
 
 import RBbot_inference.architectures as arch
 
+latest_model = "RBbot-quiet-shadow-131"
+
 
 def load_model(model_name):
     """
     Loads model saved as state_dict and applies DANN architecture
     """
+    if model_name == "latest":
+        model_name = latest_model
+
     with open(f"models/{model_name}-config.json") as f:
         config = json.load(f)
 
@@ -23,7 +28,7 @@ def load_model(model_name):
 
 
 if __name__ == "__main__":
-    model = load_model("RBbot-quiet-shadow-131")
+    model = load_model("latest")
 
     trips = np.load("examples/ZTF_exs.npy")
 
